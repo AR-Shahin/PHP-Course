@@ -1,25 +1,31 @@
 <?php
+// $a = 100;
+// $b = 500;
 
-// $i = 1;
-// while($i != 10){
-//     echo "Hello World! <br>";
-//     $i++;
+// if($a != $b){
+//     echo "Condition True!";
+//     if(true){
+//         echo "<br>Nested If Block!";
+//     }else{
+//         echo "<br> Nested Else Block";
+//     }
+// }
+// else{
+//     echo "Condition False!";
 // }
 
+$x = 200;
 
-for($i = 1;$i <= 10;$i ++){
-    if($i == 5){
+switch($x){
+    case 10:
+        echo "Ok 10";
         break;
-    }
-    echo "Hello World! - $i <br>";
+    case 20:
+        echo "Ok 20";
+        break;
+    case 30:
+        echo "Ok 30";
+        break;
+    default:
+        echo "Default";
 }
-
-// $i = 1;
-// do{
-//     echo "Hello World! <br>";
-//     $i++;
-// }while(false);
-
-// foreach ($array as $value) {
-    
-//   }
