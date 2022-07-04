@@ -1,31 +1,46 @@
 <?php
-// $a = 100;
-// $b = 500;
 
-// if($a != $b){
-//     echo "Condition True!";
-//     if(true){
-//         echo "<br>Nested If Block!";
-//     }else{
-//         echo "<br> Nested Else Block";
+// if(!function_exists("funName")){
+//     function funName(){
+//         echo "Hello World";
 //     }
 // }
-// else{
-//     echo "Condition False!";
-// }
 
-$x = 200;
-
-switch($x){
-    case 10:
-        echo "Ok 10";
-        break;
-    case 20:
-        echo "Ok 20";
-        break;
-    case 30:
-        echo "Ok 30";
-        break;
-    default:
-        echo "Default";
+function funName($name) : string
+{
+    return "Hello $name <br>";
 }
+
+// echo funName("World");
+// echo funName("Test");
+
+
+function info(string $name,int $age = 15) :void{
+
+    echo "Name : $name <br>";
+    echo "Age : $age <br>";
+}
+
+$name = "Test";
+// info(age: 20,name :$name);
+
+
+function display(...$params) :void{
+    var_dump($params[0]);
+
+}
+
+
+// display(10,20,30,40,50,60,"test");
+
+
+$sum = function($a,$b){
+    return $a + $b;
+};
+
+// echo $sum(100,20);
+
+$sub = fn($a,$b) =>  $a - $b;
+
+
+echo $sub(20,10);
