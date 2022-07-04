@@ -1,21 +1,25 @@
 <?php
 
-$num1 = 3;
-$num2 = 2;
+// $i = 1;
+// while($i != 10){
+//     echo "Hello World! <br>";
+//     $i++;
+// }
 
 
-// $num1 = $num1 + 10;
+for($i = 1;$i <= 10;$i ++){
+    if($i == 5){
+        break;
+    }
+    echo "Hello World! - $i <br>";
+}
 
-// $num1 += 10;
-// $num1 -= 10;
-// $num1 *= 10;
+// $i = 1;
+// do{
+//     echo "Hello World! <br>";
+//     $i++;
+// }while(false);
 
-// echo $num1;
-// echo $num1 ** $num2;
-
-echo -- $num1 . "<br>";
-
-echo "18  number line : " . $num1 -- . "<br>";
-
-echo "20 number line : " . $num1;
-
+// foreach ($array as $value) {
+    
+//   }
