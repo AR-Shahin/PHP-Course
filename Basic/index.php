@@ -1,16 +1,8 @@
 <?php
 
-# Super Global Variable In PHP
+# Session Global Variable In PHP
 
-$a = 10;
-$b =20;
-$c = 30;
+session_start();
 
-function test(){
-    // global $a,$b,$c;
-    // echo $a + $b + $c;
-
-    echo $GLOBALS['a'] + $GLOBALS['b'] + $GLOBALS['c'];
-}
-
-test();
+$_SESSION['name'] = "PHP Learning";
+$_SESSION['another'] = [10,20,30];
