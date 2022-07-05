@@ -1,19 +1,13 @@
 <?php
 
-# Variable Scope in PHP
+# Call by value and Call by reference 
 
-$num = 10;
 
-function fun(){
-    // global $num;
-    static $num2 = 100;
-    echo $num2;
-    $num2 += 50;
+function test(&$a){
+    $a = 100;
+    echo "Inside Fun : $a <br>";
 }
+$var = 10;
+test($var);
 
-fun();
-echo "-------";
-fun();
-echo "-------";
-fun();
-// echo $num2;
+echo "Outside Fun : $var <br>";
