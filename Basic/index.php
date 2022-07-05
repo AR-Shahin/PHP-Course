@@ -1,13 +1,23 @@
 <?php
 
-# Call by value and Call by reference 
+# Errors In PHP
+
+/*
+-> Fatal Error : 
+-> Syntax Error 
+-> Notice 
+-> Waring Error
+*/
 
 
-function test(&$a){
-    $a = 100;
-    echo "Inside Fun : $a <br>";
+// test();
+
+function test(){
+
 }
-$var = 10;
-test($var);
 
-echo "Outside Fun : $var <br>";
+$a = 10;
+
+// echo $b;
+
+// include("test.php");
