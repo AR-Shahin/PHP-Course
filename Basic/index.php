@@ -1,23 +1,10 @@
 <?php
 
-# Errors In PHP
+# Date Time In PHP
+date_default_timezone_set("Asia/Dhaka");
+// echo date("Y:m:d H:i:s a");
 
-/*
--> Fatal Error : 
--> Syntax Error 
--> Notice 
--> Waring Error
-*/
+ $today = date("F j, Y, g:i a"); 
 
 
-// test();
-
-function test(){
-
-}
-
-$a = 10;
-
-// echo $b;
-
-// include("test.php");
+echo strtotime($today);
