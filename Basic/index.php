@@ -5,6 +5,8 @@ class User {
     public $age;
     public $email;
 
+    public static $address;
+
     public function display(){
        echo $this->name;
     }
@@ -16,29 +18,21 @@ class User {
     public function eat(){
         
     }
+
+    public static function test(){
+        echo self::$address;
+    }
+    public function getAddress()
+    {
+        echo self::$address;
+    }
 }
 
-class Student{
-    public $name;
-}
-
-$user1 = new User();
-$user1->name = "User 1";
-
-// echo $user1->display();
-
-echo "<br>";
+// User::$address = "Dhaka";
+// User::test();
+$user = new User();
 $user2 = new User();
-// $user2->name = "User 2";
-
-// echo $user2->name;
-
-
-$stu = new Student();
-
-if($stu instanceof Student)
-{
-    echo "Yes";
-}else{
-    echo "NO";
-}
+$user->name = "User 1";
+User::$address = "User One Address";
+$user->getAddress();
+$user2->getAddress();
