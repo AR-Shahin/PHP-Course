@@ -1,35 +1,28 @@
 <?php
 
-abstract class User{
-    public function display(){
-
+class A{
+    public function Foo()
+    {
+        
     }
-
-    abstract public function sayHello($name) :void;
 }
-
-// $user = new User();
-
-interface Great{
-    public function sayHello($name) :void;
-
-}
-
-interface Great1{
-    public function sayHello1($name) :void;
-
-}
-class Student extends User{
-    public function sayHello($name):void{
-
+trait D{
+    public function Foo2()
+    {
+        
     }
 }
 
-class Teacher implements Great,Great1{
-    public function sayHello($name) :void{
-
+trait E{
+    public function Foo1()
+    {
+        
     }
-    public function sayHello1($name) :void{
-
+} 
+class B extends A{
+    use D,E;
+    public function Bar()
+    {
+        
     }
 }
