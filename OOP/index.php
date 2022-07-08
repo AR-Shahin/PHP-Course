@@ -1,44 +1,11 @@
 <?php
 
-# Constant In Class
+# Inheritance in OOP
 
-class User {
-    public $name;
-    public $age;
-    public $email;
+include "./models/Car.php";
 
-    public const PI = 3.1416;
+$car = new Car("BMW",1230,150);
 
-    public static $address;
-
-    public function display(){
-       echo $this->name;
-    }
-
-    public function play(){
-        
-    }
-
-   public function area($r){
-        echo self::PI * $r * $r;
-   }
-
-    public static function test(){
-        echo self::$address;
-    }
-    public function getAddress()
-    {
-        echo self::$address;
-    }
-    
-   
-
-}
-
-
-
-
- 
-$user = new User();
-echo $user->area(3);
-// echo User::PI;
+// $car->setData("BMW",1230);
+$car->display();
+$car->test();
