@@ -10,5 +10,9 @@ class Car extends Vehicle{
     public function test(){
         echo "Test";
     }
+
+    public function display(){
+        echo "Car Classes Display Method!";
+    }
     
 }
