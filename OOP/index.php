@@ -1,28 +1,14 @@
 <?php
 
-class A{
-    public function Foo()
-    {
-        
-    }
-}
-trait D{
-    public function Foo2()
-    {
-        
-    }
-}
+include "Vehicle.php";
+include "./models/Vehicle.php";
 
-trait E{
-    public function Foo1()
-    {
-        
-    }
-} 
-class B extends A{
-    use D,E;
-    public function Bar()
-    {
-        
-    }
-}
+use aaa\Vehicle as Temp;
+use abc\Vehicle as Test;
+
+
+$a = new Temp("BMW",123);
+$a->display();
+
+$b = new Test();
+$b->name = "anc";

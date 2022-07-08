@@ -1,5 +1,5 @@
 <?php
-
+namespace aaa;
 class Vehicle{
 
     public $name;
@@ -10,7 +10,7 @@ class Vehicle{
         $this->name = $name;
         $this->speed = $speed;
     }
-    protected final function display()
+    public function display()
     {
         echo "Name : " . $this->name . "<br>";
         echo "Speed : " . $this->speed . "<br>";
