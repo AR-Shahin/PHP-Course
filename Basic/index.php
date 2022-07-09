@@ -1,13 +1,13 @@
 <?php
 
-// throw new Exception("Custom Errror");
+// $data = [
+//     "name" => "PHP",
+//     "age" => 22
+// ];
 
-try{
-    // Anything 
-    echo 10/ 0;
+// var_dump($data);
+// echo json_encode($data);
 
-}catch(Exception $e){
-    echo $e->getMessage();
-}finally{
-    echo "Finally work";
-}
+$data = '{"Peter":35,"Ben":37,"Joe":43}';
+
+ print_r(json_decode($data));
