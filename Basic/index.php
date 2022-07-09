@@ -1,12 +1,13 @@
 <?php
 
-// include_once "./another.php";
+// throw new Exception("Custom Errror");
 
+try{
+    // Anything 
+    echo 10/ 0;
 
-require_once "./another.php";
-require_once "./another.php";
-require_once "./another.php";
-require_once "./another.php";
-
-
-echo "Index FIle";
+}catch(Exception $e){
+    echo $e->getMessage();
+}finally{
+    echo "Finally work";
+}
