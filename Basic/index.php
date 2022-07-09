@@ -1,11 +1,13 @@
 <?php
 
-if($_SERVER['REQUEST_METHOD'] == "POST"){
-    $name = $_REQUEST['name'];
-    $email = $_REQUEST['email'];
+if($_SERVER['REQUEST_METHOD'] == "GET"){
+    $name = $_GET['name'];
+    $email = $_GET['email'];
 
-    echo "Name :  $name <br> Email : $email";
+    echo "Name : $name <br> Email $email";
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <title>Document</title>
 </head>
 <body>
-    <form action="./index.php" method="POST">
+    <form action="./index.php" method="GET">
         <input type="text" name="name" placeholder="Enter Name "> <br>
         <input type="email" name="email" placeholder="Enter email "> <br>
         <button>Submit</button>
