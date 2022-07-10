@@ -1,13 +1,14 @@
 <?php
 
-// $data = [
-//     "name" => "PHP",
-//     "age" => 22
+# Cookie in PHP
+// $user = [
+//     "name" => "Test"
 // ];
+// $user = json_encode($user);
 
-// var_dump($data);
-// echo json_encode($data);
+// setcookie("authData",$user,time() + 86400);
 
-$data = '{"Peter":35,"Ben":37,"Joe":43}';
 
- print_r(json_decode($data));
+echo $_COOKIE['authData'];
+
+// setcookie("authData","",time() - 86400);
