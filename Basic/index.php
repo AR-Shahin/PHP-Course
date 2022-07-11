@@ -9,6 +9,6 @@
 // setcookie("authData",$user,time() + 86400);
 
 
-echo $_COOKIE['authData'];
+// echo $_COOKIE['authData'];
 
 // setcookie("authData","",time() - 86400);
