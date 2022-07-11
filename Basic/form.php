@@ -8,18 +8,18 @@ if(isset($_POST['submit'])){
     //     echo $skill . " ";
     // }
 
-//    $file =  $_FILES['file']['name']; 
+   $file =  $_FILES['file']['name']; 
 
-//    echo $file / (1024 * 1024);
+   echo $file / (1024 * 1024);
 
-//    $ext = pathinfo($file,PATHINFO_EXTENSION);
+   $ext = pathinfo($file,PATHINFO_EXTENSION);
 
-//    $tmp = $_FILES['file']['tmp_name'];
+   $tmp = $_FILES['file']['tmp_name'];
 
-//    $name = time() . "." . $ext;
+   $name = time() . "." . $ext;
 
 
-//    move_uploaded_file($tmp,"./file/$name");
+   move_uploaded_file($tmp,"./file/$name");
 
 function validation($field,$key) :void{
     if(empty($field)){
