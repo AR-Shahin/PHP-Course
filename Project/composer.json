@@ -1,0 +1,15 @@
+{
+    "name": "user/project",
+    "autoload": {
+        "psr-4": {
+            "User\\Project\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AR-Shahin",
+            "email": "mdshahinmije@gmail.com"
+        }
+    ],
+    "require": {}
+}
