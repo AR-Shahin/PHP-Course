@@ -25,4 +25,17 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             die();
         }
     }
+
+    # Delete 
+
+    if(isset($_POST['delete'])){
+        $id = $_REQUEST['id'];
+
+        if($item->delete($id)){
+            Session::set('type',"success");
+            Session::set('alert',"Data Deleted Successfully!");
+            header("Location: /");
+            die();
+        }
+    }
 }

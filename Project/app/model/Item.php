@@ -35,4 +35,20 @@ class Item extends DB{
             echo $e->getMessage();
         }
     }
+
+
+    public function delete($id)
+    {
+        $sql = "DELETE FROM `items` WHERE `id` = $id";
+
+        try{
+            if($this->con->query($sql)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch(Exception $e){
+            echo $e->getMessage();
+        }
+    }
 }

@@ -43,7 +43,10 @@ $item = new Item();
                     <td>
                         <a href="" class="btn btn-sm btn-success">View</a>
                         <a href="" class="btn btn-sm btn-info">Edit</a>
-                        <a href="" class="btn btn-sm btn-danger">Delete</a>
+                        <form action="./app/controller/ItemController.php" class="d-inline" method="POST">
+                            <input type="hidden" name="id" value="<?= $item['id']?>">
+                            <button name="delete" class="btn btn-sm btn-danger">Delete</button>
+                        </form>
                     </td>
                 </tr>
                 <?php } ?>
