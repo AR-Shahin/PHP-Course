@@ -1,6 +1,8 @@
 <?php
 namespace App\model;
 
+use Exception;
+
 class Item extends DB{
 
     public $items = [];
@@ -18,5 +20,19 @@ class Item extends DB{
         }
 
         return $this->items;
+    }
+
+    public function store($title){
+        $sql = "INSERT INTO `items` (`title`) VALUES ('$title')";
+
+        try{
+            if($this->con->query($sql)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch(Exception $e){
+            echo $e->getMessage();
+        }
     }
 }
