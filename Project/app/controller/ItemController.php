@@ -38,4 +38,19 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             die();
         }
     }
+
+
+    # Update 
+
+    if(isset($_POST['update'])){
+        $id = $_REQUEST['id'];
+        $title = $_REQUEST['title'];
+
+        if($item->update($title,$id)){
+            Session::set('type',"success");
+            Session::set('alert',"Data Updated Successfully!");
+            header("Location: /");
+            die();
+        }
+    }
 }

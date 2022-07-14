@@ -51,4 +51,35 @@ class Item extends DB{
             echo $e->getMessage();
         }
     }
+
+
+    public function show($id){
+        $sql = "SELECT * FROM `items` WHERE `id` = $id";
+
+        try{
+            $res = $this->con->query($sql);
+            if($res){
+                $row = $res->fetch_assoc();
+                return $row;
+            }else{
+                return false;
+            }
+        }catch(Exception $e){
+            echo $e->getMessage();
+        }
+    }
+
+    public function update($title,$id){
+        $sql = "UPDATE `items` SET `title` = '$title' WHERE `id` = $id" ;
+
+        try{
+            if($this->con->query($sql)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch(Exception $e){
+            echo $e->getMessage();
+        }
+    }
 }
