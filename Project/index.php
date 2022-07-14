@@ -1,8 +1,9 @@
 <?php
 
-use App\helper\Session;
 use App\model\DB;
 use App\model\Item;
+use App\helper\Auth;
+use App\helper\Session;
 
  include "./views/includes/header.php"; 
 
@@ -10,10 +11,21 @@ include "./bootstrap/app.php";
 
 $db = new DB();
 $item = new Item();
+$auth = new Auth;
+
+if(!$auth->isAuthenticate()){
+    header("Location: /login.php");
+    die();
+}
 ?>
 
 <div class="container my-3">
+    <h4>Name : <?= Session::get('userName')?></h4>
+    <h4>Email : <?= Session::get('userEmail')?></h4>
     <h2 class="text-center">Manage Items</h2>
+    <form action="./app/controller/AuthController.php" method="POST">
+        <button class="btn btn-success" name="logout">Logout</button>
+    </form>
     <hr>
     <?php
         if(Session::get('alert')) { ?>
