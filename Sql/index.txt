@@ -1,0 +1,34 @@
+CREATE  DATABASE abc2;
+
+DROP  DATABASE abc2;
+
+INSERT INTO users values(1,"User 1",101,"USA",1);
+
+INSERT INTO users values(2,"User 2",102,"USA",0),(3,"User 3",103,"BD",0);
+
+
+SELECT * FROM users ;
+
+SELECT name,roll,id FROM users ;
+
+SELECT DISTINCT address  FROM users ;
+SELECT * FROM users WHERE address = 'USA';
+SELECT * FROM users WHERE address = 'USA' AND status = 0;
+SELECT * FROM users WHERE address = 'USA' OR status = 0;
+SELECT * FROM users WHERE NOT address = 'USA';
+SELECT * FROM users ORDER BY id DESC;
+SELECT * FROM users LIMIT 5;
+SELECT * FROM users WHERE roll BETWEEN 103 AND 105;
+SELECT * FROM users WHERE  is_verified IS NULL;
+SELECT * FROM users WHERE id IN (1,2,3,5,7);
+SELECT * FROM users WHERE  is_verified IS NOT NULL;
+
+
+SELECT COUNT(id) as total_column from users; 
+SELECT max(roll) as max_roll from users; 
+SELECT min(roll) as max_roll from users; 
+SELECT AVG(roll) as max_roll from users; 
+SELECT * FROM users WHERE name LIKE "_o%"; 
+
+
+DELETE FROM users WHERE id = 1;
